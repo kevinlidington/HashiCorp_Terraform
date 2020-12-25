@@ -1,0 +1,26 @@
+#First Create a simple EC2
+
+provider "aws" {
+  region     = ""
+  access_key = ""
+  secret_key = ""
+}
+
+resource "aws_instance" "ec2" {
+    ami = "ami-0b0f4c27376f8aa79"
+    instance_type ="t2.micro"
+    
+#Excute the following command followed by "Terraform Plan".  This allows us to debug to see everything happening in Terraform. 
+
+export TF_LOG=TRACE
+
+#Send your log to a file using the following:
+
+export TF_LOG_PATH=/tmp/terraform-crash.log
+
+#The following command allows you to view your file "terraform-crash log" using nano:
+
+nano /tmp/terraform-crash.log
+
+
+

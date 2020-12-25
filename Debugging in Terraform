@@ -23,4 +23,3 @@ export TF_LOG_PATH=/tmp/terraform-crash.log
 nano /tmp/terraform-crash.log
 
 
-

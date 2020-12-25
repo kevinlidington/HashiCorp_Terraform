@@ -1,13 +1,24 @@
 #Below is an example of code that is both bad and good Terraform Format
 
-provider "aws" {
-       region     = "us-west-2"
-  access_key          = "YOUR-ACCESS-KEY"
-  secret_key = "YOUR-SECRET"
-  version = ">=2.10,<=2.30"
+  region     = "us-east-2"
+  access_key = ""
+  secret_key = ""
 }
 
-resource "aws_instance" "myec2" {
-  ami           = "ami-082b5a644766e0e6f"
+resource "aws_instance" "ec2lidington" {
+  ami = ""
+  instance_type ="t2.micro"
+}
+
+#Input terraform fmt into CLI to reformat commands follwed by the name of your file - "cat main.tf".
+
+provider "aws" {
+  region     = "us-east-2"
+  access_key = ""
+  secret_key = ""
+}
+
+resource "aws_instance" "ec2lidington" {
+  ami           = ""
   instance_type = "t2.micro"
 }
